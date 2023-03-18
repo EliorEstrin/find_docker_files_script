@@ -1,0 +1,8 @@
+FROM openjdk:8-slim
+
+COPY ./target /toxicApp
+
+WORKDIR /toxicApp
+
+ENTRYPOINT ["java", "-jar", "toxictypoapp-1.0-SNAPSHOT.jar", "--server.port=9090"]
+
